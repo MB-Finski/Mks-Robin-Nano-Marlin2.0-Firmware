@@ -129,10 +129,12 @@
   #endif
 
   #define MT_DET_1_PIN                        PA4   // LVGL UI FILAMENT RUNOUT1 PIN
-  #define MT_DET_2_PIN                        PE6   // LVGL UI FILAMENT RUNOUT2 PIN
-  #define MT_DET_PIN_INVERTING                false // LVGL UI filament RUNOUT PIN STATE
+  //#define MT_DET_2_PIN                        PE6   // LVGL UI FILAMENT RUNOUT2 PIN
+  #define MT_DET_PIN_INVERTING                true // LVGL UI filament RUNOUT PIN STATE
 
-  #define WIFI_IO0_PIN                        PC13  // MKS ESP WIFI IO0 PIN
+  #define FIL_RUNOUT_PIN                    PA4 // Not 100% sure if this is needed, but just to be sure... - Sami Finnilä
+
+  #define WIFI_IO0_PIN                        PA8  // MKS ESP WIFI IO0 PIN //Changed to PA8 for the V 1.1 board.
   #define WIFI_IO1_PIN       			            PC7   // MKS ESP WIFI IO1 PIN
   #define WIFI_RESET_PIN			              	PA5   // MKS ESP WIFI RESET PIN
 
@@ -147,7 +149,8 @@
   #define FIL_RUNOUT2_PIN                     PE6
 #endif
 
-#define SERVO0_PIN                          PA8   // Enable BLTOUCH support
+#define SERVO0_PIN                          PA6   // Enable BLTOUCH support
+#define SERVO0_TIMER_NUM 8                        // Necessary for v1.1. board
 
 //#define LED_PIN                           PB2
 
